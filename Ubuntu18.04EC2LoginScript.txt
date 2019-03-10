@@ -1,0 +1,3 @@
+chmod 400 <keyPairFile>.pem
+sudo ssh ubuntu@<publicIP> -i <keyPairFile>.pem
+
