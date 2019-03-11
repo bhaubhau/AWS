@@ -8,5 +8,7 @@ sudo dpkg -i google-chrome-stable_current_amd64.deb
 sudo apt-get install -f -y
 sudo dpkg -i google-chrome-stable_current_amd64.deb
 sudo apt install python-pip -y
-pip install behave
-pip install selenium
+sudo pip install -U behave
+sudo pip install -U selenium
+sudo pip install -U nltk
+sudo pip install -U numpy
