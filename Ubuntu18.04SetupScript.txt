@@ -12,3 +12,12 @@ sudo pip install -U behave
 sudo pip install -U selenium
 sudo pip install -U nltk
 sudo pip install -U numpy
+sudo apt install openjdk-8-jdk -y
+sudo apt install maven -y
+echo "" >> .bashrc
+echo "export JAVA_HOME=\"/usr/lib/jvm/java-8-openjdk-amd64\"" >> .bashrc
+echo "export M2_HOME=\"/usr/share/maven\"" >> .bashrc
+echo "export MAVEN_HOME=\"/usr/share/maven\"" >> .bashrc
+echo "export PATH=${M2_HOME}/bin:${PATH}" >> .bashrc
+. .bashrc
+
