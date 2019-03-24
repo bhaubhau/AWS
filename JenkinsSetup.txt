@@ -1,0 +1,26 @@
+#set Custom TCP Rule on port 8080 when creating EC2 instance
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+sudo dpkg -i google-chrome-stable_current_amd64.deb
+sudo apt-get install -f -y
+sudo apt-get update --fix-missing
+sudo apt-get install -f -y
+sudo dpkg -i google-chrome-stable_current_amd64.deb
+rm google-chrome-stable_current_amd64.deb
+sudo apt install openjdk-8-jdk -y
+sudo apt install maven -y
+echo "" >> .bashrc
+echo "export JAVA_HOME=\"/usr/lib/jvm/java-8-openjdk-amd64\"" >> .bashrc
+echo "export M2_HOME=\"/usr/share/maven\"" >> .bashrc
+echo "export MAVEN_HOME=\"/usr/share/maven\"" >> .bashrc
+echo "export PATH=${M2_HOME}/bin:${PATH}" >> .bashrc
+. .bashrc
+sudo apt install unzip -y
+sudo apt-get -y install xvfb
+wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo apt-key add -
+#sudo echo "" >> /etc/apt/sources.list
+#sudo echo "deb https://pkg.jenkins.io/debian-stable binary/" >> /etc/apt/sources.list
+sudo apt-get update
+sudo apt-get install jenkins -y
+sudo systemctl start jenkins
+sudo systemctl status jenkins
+sudo ufw status
